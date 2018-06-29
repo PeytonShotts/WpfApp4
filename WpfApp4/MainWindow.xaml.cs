@@ -78,7 +78,6 @@ namespace WpfApp4
             }
 
             
-            
         }
 
         private void AddFiles(string[] newFiles)
