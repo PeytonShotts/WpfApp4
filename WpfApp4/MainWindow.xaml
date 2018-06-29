@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+    
+        
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="720" Width="1280">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}">
+        <ScrollViewer x:Name="scrollviewer" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" HorizontalAlignment="Right" Width="400">
+            <WrapPanel x:Name="grid" HorizontalAlignment="Right" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Width="383"/>
+        </ScrollViewer>
+        <Button x:Name="Button_AddFiles" Content="Add Files..." HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Width="108" Click="Button_AddFiles_Click"/>
+        <Label x:Name="Label_FilePath" HorizontalAlignment="Left" Height="23" Margin="118,10,0,0" VerticalAlignment="Top" Width="233" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Image HorizontalAlignment="Left" Height="207" Margin="18,61,0,0" VerticalAlignment="Top" Width="333" RenderTransformOrigin="0.5,0.5"/>
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Left" Height="507" Margin="18,61,0,0" Stroke="Black" VerticalAlignment="Top" Width="500"/>
+        <Image x:Name="Image_LargePreview" HorizontalAlignment="Left" Height="507" Margin="18,61,0,0" VerticalAlignment="Top" Width="500" Stretch="Fill" />
+        <Slider x:Name="Slider_IconSize" HorizontalAlignment="Left" Height="32" Margin="695,262,0,0" VerticalAlignment="Top" Width="306" RenderTransformOrigin="0.5,0.5" Value="5" ValueChanged="Slider_IconSize_ValueChanged">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <ListBox x:Name="ListBox_FileInfo" HorizontalAlignment="Left" Height="339" Margin="518,61,0,0" VerticalAlignment="Top" Width="262" Background="#FFE4E4E4"/>
+    </Grid>
+
+
+</Window>
